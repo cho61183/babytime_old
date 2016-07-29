@@ -9,5 +9,8 @@ type MainController struct {
 }
 
 func (c *MainController) Get() {
+
 	c.TplName = "home.html"
+	c.LayoutSections = make(map[string]string)
+	c.LayoutSections["HtmlHead"] = "common/header.tpl"
 }
