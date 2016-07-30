@@ -21,11 +21,10 @@ func (c *RegisterController) Get() {
 	c.LayoutSections = make(map[string]string)
 	c.LayoutSections["HtmlHead"] = "common/header.html"
 	c.LayoutSections["HtmlFooter"] = "common/footer.html"
-
 	c.Data["Isregister"] = true
-
 }
 
 func (c *RegisterController) Post() {
-
+	c.Redirect("/", 301)
+	return
 }
