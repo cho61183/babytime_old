@@ -21,7 +21,7 @@ func (c *LoginController) Get() {
 	c.LayoutSections = make(map[string]string)
 	c.LayoutSections["HtmlHead"] = "common/header.html"
 	c.LayoutSections["HtmlFooter"] = "common/footer.html"
-	c.Data["contro_name"] = "login"
+	c.Data["Islogin"] = true
 }
 
 func (c *LoginController) Post() {

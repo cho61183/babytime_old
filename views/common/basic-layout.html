@@ -1,6 +1,9 @@
 {{.HtmlHead}}
 <title>首页 - babytime</title>
 </head>
+<style type="text/css">
+  body { padding-top: 70px; }
+</style>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
 <div class="navbar-header">
@@ -10,13 +13,13 @@
     </div>
   <div class="container">
     <ul class="nav navbar-nav">
-    <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
-    <li ><a href="/register">Register</a></li>
-    <li ><a href="/login">Login</a></li>
-    <li ><a href="/about">About</a></li>
+    <li {{if .Ishome}} class="active" {{end}}><a href="/">Home <span class="sr-only">(current)</span></a></li>
+    <li {{if .Isabout}} class="active" {{end}} ><a href="/about">About</a></li>
+    <li {{if .Islogin}} class="active" {{end}} ><a href="/login">Sign in</a></li>
+    <li {{if .Isregister}} class="active" {{end}} ><a href="/register">Sign up</a></li>
     </ul>
   </div>
-  {{.LayoutContent}}
 </nav>
+  {{.LayoutContent}}
 </body>
 </html>

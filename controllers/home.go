@@ -14,7 +14,5 @@ func (c *MainController) Get() {
 	c.LayoutSections = make(map[string]string)
 	c.LayoutSections["HtmlHead"] = "common/header.html"
 	c.LayoutSections["HtmlFooter"] = "common/footer.html"
-
-	c.Data["contro_name"] = "home"
-
+	c.Data["Ishome"] = true
 }

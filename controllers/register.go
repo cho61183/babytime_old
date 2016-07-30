@@ -22,7 +22,7 @@ func (c *RegisterController) Get() {
 	c.LayoutSections["HtmlHead"] = "common/header.html"
 	c.LayoutSections["HtmlFooter"] = "common/footer.html"
 
-	c.Data["contro_name"] = "register"
+	c.Data["Isregister"] = true
 
 }
 
