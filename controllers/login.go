@@ -17,4 +17,13 @@ type LoginController struct {
 
 func (c *LoginController) Get() {
 	c.TplName = "login.html"
+	c.Layout = "common/basic-layout.html"
+	c.LayoutSections = make(map[string]string)
+	c.LayoutSections["HtmlHead"] = "common/header.html"
+	c.LayoutSections["HtmlFooter"] = "common/footer.html"
+	c.Data["contro_name"] = "login"
+}
+
+func (c *LoginController) Post() {
+
 }

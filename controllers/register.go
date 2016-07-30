@@ -17,4 +17,15 @@ type RegisterController struct {
 
 func (c *RegisterController) Get() {
 	c.TplName = "register.html"
+	c.Layout = "common/basic-layout.html"
+	c.LayoutSections = make(map[string]string)
+	c.LayoutSections["HtmlHead"] = "common/header.html"
+	c.LayoutSections["HtmlFooter"] = "common/footer.html"
+
+	c.Data["contro_name"] = "register"
+
+}
+
+func (c *RegisterController) Post() {
+
 }
